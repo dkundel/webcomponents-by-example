@@ -1,0 +1,28 @@
+{
+  "name": "@dkundel/stencil-demo-components",
+  "version": "1.0.0",
+  "description":
+    "This is just a collection of demo web components built with Stencil",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "stencil build"
+  },
+  "keywords": ["web-components", "stencil", "demo"],
+  "author": "Dominik Kundel <dominik.kundel@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@stencil/core": "^0.3.0"
+  },
+  "devDependencies": {
+    "@stencil/utils": "0.0.4"
+  },
+  "browser": "dist/demo-components.js",
+  "main": "dist/demo-components.js",
+  "types": "dist/types/components.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "files": ["dist/"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkundel/webcomponents-by-example.git"
+  }
+}
