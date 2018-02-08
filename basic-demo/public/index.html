@@ -6,10 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>A basic usage of the web component</title>
+  <!-- Include path to hosted version of the package -->
+  <script src="https://unpkg.com/@dkundel/stencil-demo-components@1.0.0/dist/demo-components.js"></script>
 </head>
 
 <body>
   <h1>Look mom, a web component!</h1>
+  <!-- use web component -->
+  <my-progress-bar id="myBar" value="4" max="10" />
+
+  <!-- Style our progress bar -->
+  <style>
+    #myBar {
+      --background: lightseagreen;
+    }
+  </style>
 </body>
 
 </html>
