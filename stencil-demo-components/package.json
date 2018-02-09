@@ -1,6 +1,6 @@
 {
   "name": "@dkundel/stencil-demo-components",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "This is just a collection of demo web components built with Stencil",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

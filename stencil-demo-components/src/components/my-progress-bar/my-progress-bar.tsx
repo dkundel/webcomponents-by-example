@@ -2,7 +2,8 @@ import { Component, Prop, Element } from '@stencil/core';
 
 @Component({
   tag: 'my-progress-bar',
-  styleUrl: 'my-progress-bar.scss'
+  styleUrl: 'my-progress-bar.scss',
+  shadow: true
 })
 export class MyProgressBar {
   @Prop() value: number;
@@ -15,9 +16,11 @@ export class MyProgressBar {
     this.el.style.setProperty('--current-value', this.value.toString());
     this.el.style.setProperty('--max-value', this.max.toString());
 
-    return [
-      <div class="progress-bar">{this.showValue ? this.value : ' '}</div>,
-      <div class="progress-bar-remainder" />
-    ];
+    return (
+      <div class="progress-container">
+        <div class="progress-bar">{this.showValue ? this.value : ' '}</div>
+        <div class="progress-bar-remainder" />
+      </div>
+    );
   }
 }

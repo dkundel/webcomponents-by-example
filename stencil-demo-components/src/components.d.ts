@@ -5,12 +5,21 @@
  */
 
 
+declare global {
+  interface HTMLStencilElement extends HTMLElement {
+    componentOnReady(): Promise<this>;
+    componentOnReady(done: (ele?: this) => void): void;
+  }
+}
+
+
+
 import {
   MyProgressBar as MyProgressBar
 } from './components/my-progress-bar/my-progress-bar';
 
 declare global {
-  interface HTMLMyProgressBarElement extends MyProgressBar, HTMLElement {
+  interface HTMLMyProgressBarElement extends MyProgressBar, HTMLStencilElement {
   }
   var HTMLMyProgressBarElement: {
     prototype: HTMLMyProgressBarElement;
